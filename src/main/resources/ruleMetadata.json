@@ -1,0 +1,114 @@
+{
+  "input" : {
+    "alias" : "in",
+    "fields" : [
+      {
+        "fieldName" : "field1",
+        "dataType" : "string"
+      },
+      {
+        "fieldName" : "field2",
+        "dataType" : "string"
+      },
+      {
+        "fieldName" : "field3",
+        "dataType" : "string"
+      },
+      {
+        "fieldName" : "field4",
+        "dataType" : "string"
+      },
+      {
+        "fieldName" : "field5",
+        "dataType" : "decimal"
+      },
+      {
+        "fieldName" : "refkey1",
+        "dataType" : "string"
+      },
+      {
+        "fieldName" : "refkey2",
+        "dataType" : "string"
+      }
+    ]
+  },
+  "reference" : {
+    "alias" : "ref",
+    "fields" : [
+      {
+        "fieldName" : "refkey1",
+        "dataType" : "string"
+      },
+      {
+        "fieldName" : "refdata1",
+        "dataType" : "string"
+      },
+      {
+        "fieldName" : "refkey2",
+        "dataType" : "string"
+      },
+      {
+        "fieldName" : "refdata2",
+        "dataType" : "string"
+      },
+      {
+        "fieldName" : "refdata3",
+        "dataType" : "string"
+      },
+      {
+        "fieldName" : "refdata4",
+        "dataType" : "decimal"
+      }
+    ]
+  },
+  "output" : {
+    "alias" : "out",
+    "fields" : [
+      {
+        "fieldName" : "outfield1",
+        "dataType" : "string",
+        "formula" : {
+          "expression" : "in.field1 + in.field2"
+        }
+      },
+      {
+        "fieldName" : "outfield2",
+        "dataType" : "string",
+        "formula" : {
+          "expression" : "ref.refdata1",
+        }
+      },
+      {
+        "fieldName" : "outfield3",
+        "dataType" : "string",
+        "formula" : {
+          "expression" : "ref.refdata2 + ref.refdata3"
+        }
+      },
+      {
+        "fieldName" : "outfield4",
+        "dataType" : "string",
+        "formula" : {
+          "expression" : "in.field3 * max(in.field5, ref.refdata4)",
+        }
+      },
+      {
+        "fieldName" : "outfield5",
+        "dataType" : "string",
+        "formula" : {
+          "expression" : "max(in.field5, ref.refdata4)"
+        }
+      }
+    ]
+  },
+  "join" : [
+    {
+      "left" : "in.refkey1",
+      "right" : "ref.refkey1"
+    },
+    {
+      "left" : "in.refkey2",
+      "right" : "ref.refkey2"
+    }
+  ]
+}
