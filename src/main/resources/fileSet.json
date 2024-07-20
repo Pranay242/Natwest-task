@@ -1,0 +1,20 @@
+[
+  {
+    "id" : 1,
+    "inputFilePath" : "D:\\Natwest task\\Natwest-task\\src\\main\\resources\\input\\input5.csv",
+    "referenceFilePath" : "D:\\Natwest task\\Natwest-task\\src\\main\\resources\\input\\reference5.csv",
+    "inputExtension" : "CSV",
+    "referenceExtension" : "CSV",
+    "outputExtension" : "CSV",
+    "outputFilePath" : "D:\\Natwest task\\Natwest-task\\src\\main\\resources\\output\\output5.csv"
+  },
+  {
+    "id" : 2,
+    "inputFilePath" : "D:\\Natwest task\\Natwest-task\\src\\main\\resources\\input\\input6.csv",
+    "referenceFilePath" : "D:\\Natwest task\\Natwest-task\\src\\main\\resources\\input\\reference6.csv",
+    "inputExtension" : "CSV",
+    "referenceExtension" : "CSV",
+    "outputExtension" : "CSV",
+    "outputFilePath" : "D:\\Natwest task\\Natwest-task\\src\\main\\resources\\output\\output6.csv"
+  }
+]

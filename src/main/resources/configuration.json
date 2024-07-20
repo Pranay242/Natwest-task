@@ -68,7 +68,8 @@
         "fieldName" : "outfield1",
         "dataType" : "string",
         "formula" : {
-          "expression" : "in.field1 + in.field2"
+          "expression" : "in.field1 + in.field2",
+          "operationType" : "arithmetic"
         }
       },
       {
@@ -76,13 +77,15 @@
         "dataType" : "string",
         "formula" : {
           "expression" : "ref.refdata1",
+          "operationType" : "assignment"
         }
       },
       {
         "fieldName" : "outfield3",
         "dataType" : "string",
         "formula" : {
-          "expression" : "ref.refdata2 + ref.refdata3"
+          "expression" : "ref.refdata2 + ref.refdata3",
+          "operationType" : "arithmetic"
         }
       },
       {
@@ -90,25 +93,39 @@
         "dataType" : "string",
         "formula" : {
           "expression" : "in.field3 * max(in.field5, ref.refdata4)",
+          "operationType" : "arithmetic"
         }
       },
       {
         "fieldName" : "outfield5",
         "dataType" : "string",
         "formula" : {
-          "expression" : "max(in.field5, ref.refdata4)"
+          "expression" : "max(in.field5, ref.refdata4)",
+          "operationType" : "arithmetic"
         }
       }
     ]
   },
   "join" : [
     {
-      "left" : "in.refkey1",
-      "right" : "ref.refkey1"
+      "inputField" : {
+        "fieldName" : "refkey1",
+        "dataType" : "string"
+      },
+      "referenceField" : {
+        "fieldName" : "refkey1",
+        "dataType" : "string"
+      }
     },
     {
-      "left" : "in.refkey2",
-      "right" : "ref.refkey2"
+      "inputField" : {
+        "fieldName" : "refkey2",
+        "dataType" : "string"
+      },
+      "referenceField" : {
+        "fieldName" : "refkey2",
+        "dataType" : "string"
+      }
     }
   ]
 }

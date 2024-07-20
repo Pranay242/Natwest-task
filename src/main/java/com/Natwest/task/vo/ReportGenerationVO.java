@@ -1,5 +1,6 @@
 package com.Natwest.task.vo;
 
+import com.Natwest.task.bean.NatwestConfiguration;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import lombok.Setter;
@@ -13,8 +14,12 @@ public class ReportGenerationVO {
     private String inputFilePath;
     private String referenceFilePath;
     private FileType inputExtension;
+    private FileType referenceExtension;
 
     private String outputFilePath;
     private FileType outputExtension;
+
+    @JsonIgnore
+    private NatwestConfiguration natwestConfiguration;
 
 }
