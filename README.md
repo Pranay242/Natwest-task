@@ -76,4 +76,37 @@ While writing code take care of following points.
 
 ```
 
-Configuration File - 
+Configuration File -
+https://github.com/Pranay242/Natwest-task/blob/master/src/main/resources/configuration.json
+
+In configuration file there are three main file schematic in it and joining condition.
+we can also change this schematic of file using as per our requirement.
+In the configuration, one must put all files metadata(input, reference, output) in the format mentioned in the configuration.json
+
+Assumption
+1. In this task, upstream feed is taken from local disk and file path to be mentioned in fileSet.json in the format required.
+2. If expression is arithmetic, then all columns should be int/float, otherwise null will be populated in output file
+3. If expression is assignment, simple taken from field from RHS
+4. If reference row is not found, then null values will be populated
+5. Only arithmetic and assignment operation type is implemented, any other can be implemented in the code.
+6. Keep all configuration required in the configuration file as per the schematic
+7. Provide the fileSet as structure, as it is only reading from local disk
+8. Schedule cron can be changed using application.properties
+
+
+**How to start Web app -** 
+
+class name - NatwestTaskApplication.java
+
+**API endpoint**
+
+GET /request
+
+**Schedule**
+Class name - NatwestSchedule.java
+
+**Test class**
+Class name - [NatwestTaskApplicationTests.java](src%2Ftest%2Fjava%2Fcom%2FNatwest%2Ftask%2Fnatwest_task%2FNatwestTaskApplicationTests.java)
+
+**Note** - Sample input and reference data is provided in resources
+
