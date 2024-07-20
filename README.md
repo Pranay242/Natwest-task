@@ -77,7 +77,7 @@ While writing code take care of following points.
 ```
 
 Configuration File -
-https://github.com/Pranay242/Natwest-task/blob/master/src/main/resources/configuration.json
+https://github.com/Pranay242/Natwest-task/blob/master/src/main/resources/config/configuration.json
 
 In configuration file there are three main file schematic in it and joining condition.
 we can also change this schematic of file using as per our requirement.
