@@ -97,6 +97,7 @@ Assumption
 **How to start Web app -** 
 
 class name - NatwestTaskApplication.java
+Set the classpath to the working directory in order to read config files
 
 **API endpoint**
 

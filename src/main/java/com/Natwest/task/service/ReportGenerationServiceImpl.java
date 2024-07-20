@@ -124,7 +124,7 @@ public class ReportGenerationServiceImpl implements ReportGenerationService {
 
     @Override
     public List<ReportGenerationVO> getFilesFromLocalForReportGenerationVO() {
-        List<ReportGenerationVO> reportGenerationVOS = readVOFromPath("D:\\Natwest task\\Natwest-task\\src\\main\\resources\\fileSet.json");
+        List<ReportGenerationVO> reportGenerationVOS = readVOFromPath("config/fileSet.json");
         return reportGenerationVOS;
     }
 
@@ -132,7 +132,7 @@ public class ReportGenerationServiceImpl implements ReportGenerationService {
     public NatwestConfiguration getConfiguration() {
         ObjectMapper objectMapper = new ObjectMapper();
         try {
-            return objectMapper.readValue(new File("D:\\Natwest task\\Natwest-task\\src\\main\\resources\\configuration.json"), new TypeReference<NatwestConfiguration>(){});
+            return objectMapper.readValue(new File("config/configuration.json"), new TypeReference<NatwestConfiguration>(){});
         } catch (IOException e) {
             log.error("Error while reading config files");
             throw new RuntimeException(e);
